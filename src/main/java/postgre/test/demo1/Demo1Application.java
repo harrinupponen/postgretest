@@ -30,10 +30,10 @@ public class Demo1Application {
 			testRepo.save(new Test("TestText"));
 			
 			
-			/*
-			 * log.info("fetch all tests"); for (Test test : testRepo.findAll()) {
-			 * log.info(test.toString()); }
-			 */
+			log.info("fetch all tests");
+			for (Test test : testRepo.findAll()) {
+				log.info(test.toString());
+			}
 
 		};
 	}
