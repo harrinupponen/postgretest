@@ -31,8 +31,8 @@ public class Demo1Application {
 			
 			
 			log.info("fetch all tests");
-			for (PgTest test : testRepo.findAll()) {
-				log.info(test.toString());
+			for (PgTest pgTest : testRepo.findAll()) {
+				log.info(pgTest.toString());
 			}
 
 		};
