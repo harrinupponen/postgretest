@@ -22,7 +22,7 @@ public class Demo1Application {
 	}
 	
 	@Bean
-	public CommandLineRunner bookDemo(TestRepo testRepo) { 
+	public CommandLineRunner testDemo(TestRepo testRepo) { 
 		return (args) -> {
 			log.info("save a couple of tests");
 			
