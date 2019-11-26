@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Test {
+public class PgTest {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -26,17 +26,17 @@ public class Test {
 		this.text = text;
 	}
 	
-	public Test() {
+	public PgTest() {
 	}
 	
-	public Test(String text) {
+	public PgTest(String text) {
 		super();
 		this.text = text;
 	}
 	
 	@Override
 	public String toString() {
-		return "Test [id=" + id + ", text=" + text + "]";
+		return "PgTest [id=" + id + ", text=" + text + "]";
 	}
 	
 	

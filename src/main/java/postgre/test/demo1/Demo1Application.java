@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import postgre.test.demo1.domain.Test;
+import postgre.test.demo1.domain.PgTest;
 import postgre.test.demo1.domain.TestRepo;
 
 
@@ -27,11 +27,11 @@ public class Demo1Application {
 			log.info("save a couple of tests");
 			
 			
-			testRepo.save(new Test("TestText"));
+			testRepo.save(new PgTest("TestText"));
 			
 			
 			log.info("fetch all tests");
-			for (Test test : testRepo.findAll()) {
+			for (PgTest test : testRepo.findAll()) {
 				log.info(test.toString());
 			}
 

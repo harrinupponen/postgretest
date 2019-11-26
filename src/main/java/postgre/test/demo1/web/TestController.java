@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import postgre.test.demo1.domain.Test;
+import postgre.test.demo1.domain.PgTest;
 import postgre.test.demo1.domain.TestRepo;
 
 @Controller
@@ -25,14 +25,14 @@ public class TestController {
 	// empty form
 	@GetMapping(value = "/addtest")
 	public String getNewForm(Model model) {
-		model.addAttribute("test", new Test());
+		model.addAttribute("test", new PgTest());
 		return "addtest";
 	}
 
 	// receive and save data from the form
 	@PostMapping(value = "/addtest")
-	public String addBook(@ModelAttribute Test test) {
-		testRepo.save(test);
+	public String addBook(@ModelAttribute PgTest pgTest) {
+		testRepo.save(pgTest);
 		return "redirect:/test";
 	}
 
