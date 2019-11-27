@@ -33,7 +33,7 @@ public class TestController {
 	@PostMapping(value = "/addtest")
 	public String addBook(@ModelAttribute PgTest pgTest) {
 		testRepo.save(pgTest);
-		return "redirect:/test";
+		return "redirect:/";
 	}
 
 }
